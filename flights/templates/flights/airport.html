@@ -1,0 +1,42 @@
+{% extends "flights/layout.html" %}
+
+{% block body %}
+    <h2 style="text-align:center;font-family:Lato;"><b>{{airport.name}}</b> ({{airport.code}})</h2>
+    {% if flights %}
+      {% for flight in flights %}
+        <div class="flight">
+          <div>
+            <h4>From <a href="/code/{{flight.origin.code}}">{{flight.origin.name}}</a> To <a href="/code/{{flight.destination.code}}">{{flight.destination.name}}</a>
+              <a style="font-size:20px;" href="/flight/{{flight.id}}">#{{flight.id}}</a></h4>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="container">
+             <ul class="pagination justify-content-center">
+                 {% if page_obj.has_previous %}
+                     <li class="page-item"><a href="?page=1" class="page-link">&laquo; First</a></li>
+                     <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">Previous</a></li>
+                 {% else %}
+                 <li class="page-item disabled"><a class="page-link">&laquo; First</a></li>
+                 <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                 {% endif %}
+
+
+                 {% if page_obj.number %}
+                 <li class="page-item"><a class="page-link" href="?page={{page_obj.number}}">{{ page_obj.number }}</a></li>
+                 {% else %}
+                 <li class="page-item"><a class="page-link">0</a></li>
+                 {% endif %}
+                 {% if page_obj.has_next %}
+                 <li class="page-item"><a href="?page={{ page_obj.next_page_number }}" class="page-link">Next</a></li>
+                 <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}" class="page-link">Last &raquo;</a></li>
+                 {% else %}
+                 <li class="page-item disabled"><a class="page-link">Next</a></li>
+                 <li class="page-item disabled"><a class="page-link">Last &raquo;</a></li>
+                 {% endif %}
+             </ul>
+         </div>
+    {% else %}
+      <h3><s>No flights</s> in this <b>Airport</b></h3>
+    {% endif %}
+{% endblock %}

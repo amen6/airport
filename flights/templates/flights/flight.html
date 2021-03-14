@@ -1,0 +1,18 @@
+{% extends "flights/layout.html" %}
+
+{% block body %}
+    <div style="text-align:center;">
+      <h4 style="font-family:Lato;">From <a href="/code/{{flight.origin.code}}">{{flight.origin.name}}</a> To <a href="/code/{{flight.destination.code}}">{{flight.destination.name}}</a>
+        <span style="opacity:0.7; font-size:25px;">#{{flight.id}}</span></h4>
+      <div>
+        {% if request.user in flight.passengers.all %}
+          <div><a href="/cancel/{{flight.id}}" class="btn btn-dark">Cancel Booking</a></div>
+        {% else %}
+          <div><a href="/book/{{flight.id}}" class="btn btn-dark">Book Seat</a></div>
+        {% endif %}
+      </div>
+      <div>
+          <h4>Passengers: {{flight.passengers.count}}</h4>
+      </div>
+    </div>
+{% endblock %}

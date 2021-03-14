@@ -1,0 +1,23 @@
+{% extends "flights/layout.html" %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        <div style="text-align:center;font-family:Lato;">
+            <h2><b>Are you sure you want to cancel booking on this plane</b></h2>
+            <h4>From <a href="/code/{{flight.origin.code}}">{{flight.origin.name}}</a> To <a href="/code/{{flight.destination.code}}">{{flight.destination.name}}</a></h4>
+        </div>
+        <div class="book">
+          <div>
+              <form  action="{% url 'cancel' id=flight.id %}" method="post">
+                {% csrf_token %}
+                <div class="">
+                  <input type="submit" class="btn btn-danger" value="Yes">
+                </div>
+              </form>
+          </div>
+          <div>
+            <a href="/" class="btn btn-success">No</a>
+          </div>
+        </div>
+    {% endif %}
+{% endblock %}
