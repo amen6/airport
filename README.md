@@ -1,12 +1,55 @@
 # Airport
-I designed a web application where user can check airports, flights, book/cancel seat.
-After user login, the *Home* page will be shown, it has all flights in a specific Formula which is *(From -airport- To -airport- #-number-)*
-<img src="Images/Home.jpg" alt="Home page" /> \
-I used the *hover selector*  on *-airport-* and *#-number-* because it will make it easier to distinguish.\
-When user clicks on *-airport-* he will get redirected to that airport page which have all flights from and to this airport
-<img src="Images/Airport.jpg" alt="Airport page" /> \
-User can also reach a specific airport page by clicking on *Airports* in the navbar, it will give him a page with all airports, and by clicking on one of them he will get redirected to the same airport specific page.\
-<img src="Images/Airports.jpg" alt="All airports" /> \
-By clicking on *#-number-* at the end of every flight, he will go to this specific flight page, it will show him *origin, destination, book seat or cancel booking(it depends if he has booked a seat or not),  and the number of passengers on this flight*\
-<img src="Images/Flight.jpg" alt="Flight page" /> \
-The work of *My Flights* in the navbar is clear, it will shows the user all flights he booked on.
+
+![Project Image](Images/Home.jpg)
+
+> That's the home page which shows all flights
+
+---
+
+### Reference
+Headers location reference.
+
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [What have i used](#what-i-have-used)
+---
+
+## Description
+
+ Airport is a web application where user can check flights, their destination, origin and passengers number. User can also checks airports, which flights are going to and from this airport. \
+ The user is able to book seat on flight and cancel booking too.
+
+#### What i have used
+
+- HTML
+- Css
+- Python
+- Django
+- Bootstrap
+
+[Back To The Top](#airport)
+
+---
+
+## How To Use
+
+- ### Home
+ It shows all flights in a specific Formula which is *(From -airport- To -airport- #-number-)*. I used the *hover selector*  on *-airport-* and *#-number-* because it will make it easier to distinguish.
+
+ - When user clicks on:
+
+   - *-airport-*: he will get redirected to this specific airport page, it shows all flights from and to this airport.
+
+    - *#number*: he will get redirected to that flight page, he can book a seat or cancel booking, and he can see the passengers number on this flights
+
+
+- ### Airports
+  It shows all airports with their **IATA** code, and by clicking on the airport name he will be redirected to this airport page
+
+- ### My Flights
+  It shows the flights that user has booked on
+
+
+[Back To The Top](#airport)
+
+---
