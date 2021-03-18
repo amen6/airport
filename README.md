@@ -6,7 +6,7 @@
 
 ---
 
-## Description
+## Description ✈
 
  Airport is a web application where user can check flights, their destination, origin and passengers number. User can also checks airports, which flights are going to and from this airport. \
  The user is able to book seat on flight and cancel booking too.
