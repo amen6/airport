@@ -1,6 +1,6 @@
 # Airport
 
-![Project Image](Images/Home.jpg)
+![Project Image](Images/airport.gif)
 
 > That's the home page which shows all flights
 
