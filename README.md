@@ -6,14 +6,6 @@
 
 ---
 
-### Reference
-Headers location reference.
-
-- [Description](#description)
-- [How To Use](#how-to-use)
-- [What have i used](#what-i-have-used)
----
-
 ## Description
 
  Airport is a web application where user can check flights, their destination, origin and passengers number. User can also checks airports, which flights are going to and from this airport. \
