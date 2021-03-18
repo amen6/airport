@@ -1,8 +1,9 @@
-# Airport
+# ✈
+# Airport 
 
 ![Project Image](Images/airport.gif)
 
-> That's the home page which shows all flights
+> GIF declaring how the web works
 
 ---
 
